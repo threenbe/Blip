@@ -48,7 +48,10 @@ static int32_t operate(String& op, int32_t arg1, int32_t arg2) {
 }
 
 /***************************************execute***************************************
-This function actually 
+This function actually solves an expression. It is only called to solve a single expression
+at a time. The result is pushed onto the stack.
+INPUTS: references to value and operator stacks
+OUTPUTS: none
 */
 static void execute(std::stack<int32_t>& value_stack, std::stack<String>& operator_stack) {
 	String not_ = String("!");
