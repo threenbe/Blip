@@ -12,12 +12,12 @@ struct BST {
 private:
 	struct Node {
 		T value;
-		int32_t var_value;
+		int var_value;
 		Node* left;
 		Node* right;
 		Node* parent;
 
-		Node(T value, int32_t var_value) {
+		Node(T value, int var_value) {
 			this->value = value;
 			this->var_value = var_value;
 			left = right = parent = nullptr;
@@ -199,7 +199,7 @@ public:
 		return *this;
 	}
 
-	void insert(T value, int32_t var_value) {
+	void insert(T value, int var_value) {
 		Node* child = new Node(value, var_value); // create new Node which will be inserted
 
 		if (root == nullptr) {
@@ -230,7 +230,7 @@ public:
 		child->parent = parent;
 	}
 
-	void updateVar(T value, int32_t var_val) {
+	void updateVar(T value, int var_val) {
 		Node* n = find(root, value);
 		n->var_value = var_val;
 	}
