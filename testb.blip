@@ -1,0 +1,51 @@
+output - * / 15 - 7 + 1 1 3 + 2 + 1 1
+text " is 5\n"
+
+output + + + 3 - 7 * 2 + + 8 7 6 6 6
+text " is -20\n"
+
+output + / * 2 - % 4 3 && < 17 == 14 13 || ~ 1 2 ! 0 5
+text " is 7\n\n"
+
+var a 1
+output a
+text "\na = 1\n\n"
+
+var heresalongname 4
+output heresalongname
+text "\nshould be 4\n\n"
+
+var b + / * 2 - % heresalongname 3 && < 17 == 14 13 || ~ 1 2 ! 0 5
+output b
+text "\nb = 7\n\n"
+
+output - * / 15 - b + a a 3 + 2 + a a
+text "\noutput is 5\n\n"
+
+output b
+text "\nb is still 7\n\n"
+
+output a
+text "\na is 1\n\n"
+
+set b - * / 15 - b + a a 3 + 2 + a a
+output b
+text "\nb = 5\n\n"
+
+text "should get err message below\n"
+var a + / * 2 - % 4 + a 2 && < 17 == 14 b || ~ a 2 ! 0 5
+output a
+text "\na = 7\n\n"
+
+text "no err message\n"
+var c + + + 3 - a * 2 + + 8 a 6 6 + b 1
+output c
+text "\nit's -20\n\n"
+
+text "no err message\n"
+set a * 10 + 1 + 2 * 3 % 4 - 17 && 18 / 2 ~ 1
+output a
+text "\nshould be 150\n\n"
+
+text "Hello World\n"
+
